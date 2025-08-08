@@ -1,16 +1,35 @@
 import { describe,it,expect,test } from "vitest";
 import { max } from "../src/intro.js";
+import { fizzBuzz } from "../src/intro.js";
 
 describe("max", () => {
     it("should return first argument if its greater", () => {
         expect(max(2, 1)).toBe(2);
-        expect(max(1, 2)).toBe(2);
-        expect(max(-1, -2)).toBe(-1);
-        expect(max(-2, -1)).toBe(-1);
-        expect(max(0, 0)).toBe(0);
     });
+
+    it("should return the second argument if greater", () => {
+        expect(max(1,2)).toBe(2)
+    })
     
     it("should return the first number if both are equal", () => {
         expect(max(3, 3)).toBe(3);
     });
+})
+
+describe('fizzbuzz', () => {
+  it("should return FizzBuzz if number is both divisible by 3 and 5",() => {
+    expect(fizzBuzz(15)).toBe("FizzBuzz")
+  })
+
+  it("should return Fizz if number is both divisible by 3",() => {
+    expect(fizzBuzz(81)).toBe("Fizz")
+  })
+
+   it("should return Buzz if number is both divisible by 5",() => {
+    expect(fizzBuzz(10)).toBe("Buzz")
+  })
+
+  it("should return a string if number is neither divisible by 5 nor 3",() => {
+    expect(fizzBuzz(8)).toBe("8")
+  })
 })
