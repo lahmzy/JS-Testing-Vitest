@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { caluclateAverage, fizzBuzz, max } from "../src/intro.js";
+import { caluclateAverage, fizzBuzz, max,factorial } from "../src/intro.js";
 
 describe("max", () => {
   it("should return first argument if its greater", () => {
@@ -43,3 +43,19 @@ describe("calculate Average", ()=> {
     })
 })
 
+describe("factorial", () =>{
+    it("should return 1 if number is 0", () => {
+        expect(factorial(0)).toBe(1);
+    });
+    
+    it("should return 1 if number is 1", () => {
+        expect(factorial(1)).toBe(1);
+    });
+    
+    it("should return the factorial of a number greater than 1", () => {
+        expect(factorial(5)).toBe(120);
+        expect(factorial(4)).toBe(24);
+        expect(factorial(3)).toBe(6);
+        expect(factorial(2)).toBe(2);
+    });
+})

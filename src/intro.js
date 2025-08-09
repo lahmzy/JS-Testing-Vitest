@@ -18,3 +18,16 @@ export function caluclateAverage(arr) {
 
   return sum / arr.length;
 }
+
+export function factorial(number){
+
+  if (number === 0 || number === 1) return 1;
+
+  const productArray = [];
+  
+  for (let i = number; i > 1; i--) {
+    productArray.push(i);
+  }
+
+  return productArray.reduce((acc, current) => acc * current, 1);
+}
